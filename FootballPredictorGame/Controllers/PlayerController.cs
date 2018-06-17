@@ -3,7 +3,7 @@ using Business.Repositories;
 using Domain.Core;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FootballGuessGame.Controllers
+namespace FootballPredictorGame.Controllers
 {
     [Produces("application/json")]
     [Route("api/Player")]
