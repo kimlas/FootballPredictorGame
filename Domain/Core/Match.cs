@@ -11,8 +11,8 @@ namespace Domain.Core
         public DateTime StartDate { get; set; }
         public Team HomeTeam { get; set; }
         public Team AwayTeam { get; set; }
-
         public List<MatchEvent> MatchEvents { get; set; }
-
+        public DateTime Created { get; set; }
+        public DateTime Modified { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Domain.Core;
+﻿using System;
+using Domain.Core;
 using Domain.Interfaces;
 
 namespace Domain.MatchEvents
@@ -8,5 +9,7 @@ namespace Domain.MatchEvents
         public int Id { get; set; }
         public int Minute { get; set; }
         public Player Player { get; set;  }
+        public DateTime Created { get; set; }
+        public DateTime Modified { get; set; }
     }
 }

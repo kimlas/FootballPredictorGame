@@ -36,6 +36,8 @@ namespace Persistence.Repositories
             }
 
             entity.Id = GetNextId();
+            entity.Created = DateTime.Now;
+            entity.Modified = DateTime.Now;
 
             _entities.Add(entity);
             Persist();
@@ -63,8 +65,11 @@ namespace Persistence.Repositories
                 throw new Exception($"Cannot update entity with id {entity.Id}. Not found.");
             }
 
+            DateTime created = entity.Created;
             Remove(entity);
             Add(entity);
+            entity.Created = created;
+            entity.Modified = DateTime.Now;
 
             Persist();
         }
