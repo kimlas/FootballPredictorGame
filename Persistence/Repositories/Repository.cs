@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using Business.Repositories;
-using Domain.Bases;
+using Domain.Interfaces;
 using Persistence.Persisters;
 
 namespace Persistence.Repositories
 {
-    public abstract class Repository<T> : IRepository<T> where T : Entity
+    public abstract class Repository<T> : IRepository<T> where T : IEntity
     {
         private readonly IRepositoryPersister<T> _repositoryPersister;
         private readonly List<T> _entities;

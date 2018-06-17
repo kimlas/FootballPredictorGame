@@ -1,8 +1,9 @@
-﻿using Domain.Bases;
+﻿using Domain.Interfaces;
 
 namespace Domain.Core
 {
-    public class Group : Entity
+    public class Group : IEntity
     {
+        public int Id { get; set; }
     }
 }

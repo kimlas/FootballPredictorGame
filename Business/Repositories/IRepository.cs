@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Domain.Bases;
+using Domain.Interfaces;
 
 namespace Business.Repositories
 {
-    public interface IRepository<T> where T : Entity
+    public interface IRepository<T> where T : IEntity
     {
         List<T> GetAll();
         T Get(int id);

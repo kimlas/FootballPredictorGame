@@ -1,9 +1,10 @@
-﻿using Domain.Bases;
+﻿using Domain.Interfaces;
 
 namespace Domain.Core
 {
-    public class Player : Entity
+    public class Player : IEntity
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public int ShirtNumber { get; set; }
     }

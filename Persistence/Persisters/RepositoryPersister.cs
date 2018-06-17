@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using Domain.Bases;
+using Domain.Interfaces;
 using Microsoft.AspNetCore.Hosting;
 using Newtonsoft.Json;
 
 namespace Persistence.Persisters
 {
-    public abstract class RepositoryPersister<T> : IRepositoryPersister<T> where T : Entity
+    public abstract class RepositoryPersister<T> : IRepositoryPersister<T> where T : IEntity
     {
         private readonly IHostingEnvironment _hostingEnvironment;
 
