@@ -1,4 +1,5 @@
-﻿using Business.Repositories;
+﻿using System.Collections.Generic;
+using Business.Repositories;
 using Domain.Core;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,7 +15,14 @@ namespace FootballGuessGame.Controllers
         {
             _playerRepository = playerRepository;
         }
-        
+
+        [HttpGet]
+        [Route("GetAll")]
+        public List<Player> GetAll()
+        {
+            return _playerRepository.GetAll();
+        }
+
         [HttpGet]
         [Route("Get")]
         public Player Get(int id)
